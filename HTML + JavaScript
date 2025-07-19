@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>詩歌搜尋 | 詩歌本第一冊</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+      background-color: #111;
+      color: #fff;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #searchBox {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 10px;
+      margin-bottom: 8px;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    li:hover {
+      background-color: rgba(255,255,255,0.2);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>📖 詩歌本 第一冊</h1>
+  <input type="text" id="searchBox" placeholder="輸入歌名搜尋..." />
+
+  <ul id="songList">
+    <li>交託</li>
+    <li>因祢聖靈 榮上加榮</li>
+    <li>神掌權</li>
+    <li>是祢讓我抬起頭</li>
+    <li>我主何等美麗</li>
+    <li>祢的寶座在這裡</li>
+    <li>我要看見神的國度</li>
+    <li>耶和華以勒的神</li>
+    <li>喜樂的心</li>
+    <li>因祢的愛</li>
+    <li>我的禱告</li>
+    <li>溫柔的聖靈(吸引我靈)</li>
+    <li>Beautiful</li>
+    <li>聖靈 烈火</li>
+    <li>主的名有能力</li>
+    <li>與祢面對面</li>
+    <li>是祢揀選我</li>
+    <li>堅定的約</li>
+    <li>祢的愛(從來沒有想過)</li>
+    <li>我有耶穌救恩的記號</li>
+    <li>快樂敬拜</li>
+    <li>大大喜樂</li>
+    <li>興起吧 神的兒女</li>
+    <li>新的一天</li>
+    <li>將榮耀歸於(祢)神</li>
+    <li>我尊榮祢</li>
+    <li>在 神凡事都能</li>
+    <li>奇妙的救主</li>
+    <li>沒有人可以幫助我們</li>
+    <li>神的靈運行</li>
+    <li>我心回轉向祢</li>
+    <li>求吸引我心</li>
+    <li>完全的愛</li>
+    <li>I Believe</li>
+    <li>新酒新油</li>
+    <li>我要歌頌</li>
+    <li>一天七次讚美祢</li>
+    <li>最高榮耀</li>
+    <li>和散那</li>
+    <li>親愛聖靈</li>
+    <li>哦 猶大的獅子</li>
+    <li>一件新事</li>
+    <li>耶和華以勒</li>
+    <li>進入神的禧年</li>
+    <li>I Love You, Jesus</li>
+    <li>聖靈如烈火降臨</li>
+    <li>祢的同在</li>
+    <li>Here I am 我在這裡</li>
+    <li>我的每一天</li>
+    <li>完美平安</li>
+  </ul>
+
+  <script>
+    const searchBox = document.getElementById("searchBox");
+    const songList = document.getElementById("songList");
+    const songs = Array.from(songList.getElementsByTagName("li"));
+
+    searchBox.addEventListener("input", () => {
+      const keyword = searchBox.value.toLowerCase();
+      songs.forEach(song => {
+        const text = song.textContent.toLowerCase();
+        song.style.display = text.includes(keyword) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
