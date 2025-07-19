@@ -1,10 +1,10 @@
-/* 背景與整體排版 */
+/* 背景與字型 */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  color: white;
   background: url('images/dark-gradient.png') no-repeat center center fixed;
   background-size: cover;
+  color: white;
   display: flex;
 }
 
@@ -32,7 +32,7 @@ body {
   color: #ffd700;
 }
 
-/* 主內容區 */
+/* 主區塊 */
 main {
   margin-left: 240px;
   padding: 40px;
@@ -58,7 +58,7 @@ main {
   color: #eee;
 }
 
-/* 詩歌展示區 */
+/* 詩歌展示 */
 .albums {
   text-align: center;
   margin-top: 60px;
@@ -80,7 +80,7 @@ main {
   transform: scale(1.08);
 }
 
-/* 聯絡資訊區 */
+/* 聯絡資訊 */
 .contact {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 30px;
